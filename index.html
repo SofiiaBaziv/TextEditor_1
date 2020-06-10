@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 16</title>
+    <script src="text.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="mainBlock" class="main-block">
+
+            <div id="top-Block" class="top-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+
+            <div class="btn-block">
+                <form>
+                    <button id="editBtn" type="button" class="btn-edit" onclick="editbt()">edit</button>
+                    <button id="styleBtn" type="button" class="btn-style" onclick="stylebt()">style</button>
+                </form>
+            </div>
+
+            <div class="bottom-block">
+
+                <div id="editBlock" class="edit-block hidden">
+                    <form>
+                        <textarea id="area" class="area"></textarea>
+                        <button id="addBtn" type="button" class="btn-add" onclick="addbt()">add</button>
+                        <button id="saveBtn" type="button" class="btn-save" onclick="savebt()">save</button>
+                    </form>
+                </div>
+                <div id="styleBlock" class="style-block hidden">
+                    <form name="fontSize">
+                        <h4 class="mainText">Font Size:</h4>
+                        <input onclick="fontSizee()" class="sizeStyle custom-radio" type="radio" name="size" value="12px" id="rb1">
+                        <label for="rb1">12px</label>
+                        <input onclick="fontSizee()" class="sizeStyle custom-radio" type="radio" name="size" value="14px" id="rb2">
+                        <label for="rb2">14px</label>
+                        <input onclick="fontSizee()" checked class="sizeStyle custom-radio" type="radio" name="size" value="16px" id="rb3">
+                        <label for="rb3">16px</label>
+                        <input onclick="fontSizee()" class="sizeStyle custom-radio" type="radio" name="size" value="18px" id="rb4">
+                        <label for="rb4">18px</label>
+                        <input onclick="fontSizee()" class="sizeStyle custom-radio" type="radio" name="size" value="20px" id="rb5">
+                        <label for="rb5">20px</label>
+                    </form>
+
+                    <form name="fontFam">
+                        <h4 class="mainText">Font Family:</h4>
+                        <select id="fontFF" class="fontFamily" onchange="fontFamily()"> 
+                            <option value="Times New Roman">Choose option</option>
+                            <option value="cursive">cursive</option>
+                            <option value="fantasy">fantasy</option>
+                            <option value="monospace">monospace</option>
+                            <option value="sans-serif">sans-serif</option>
+                        </select>
+                    </form>
+
+                    <form name="colorss">
+                        <h4 class="mainTextColor">Colors:</h4>
+                        <button id="colorBtn" type="button" class="btn-colorOfText" onclick="chooseColor()">Color of Text</button>
+                        <button id="backgroundBtn" type="button" class="backgroundColor" onclick="chooseBgr()">Background color</button>
+                    </form>
+
+                    <div id="main">
+                        <div class="c c-1" onclick="changeBg('teal')"></div>
+                        <div class="c c-2" onclick="changeBg('firebrick')"></div>
+                        <div class="c c-3" onclick="changeBg('aqua')"></div>
+                        <div class="c c-4" onclick="changeBg('greenyellow')"></div>
+                        <div class="c c-5" onclick="changeBg('gray')"></div>
+                        <div class="c c-6" onclick="changeBg('red')"></div>
+                        <div class="c c-7" onclick="changeBg('blue')"></div>
+                        <div class="c c-8" onclick="changeBg('blueviolet')"></div>
+                        <div class="c c-9" onclick="changeBg('goldenrod')"></div>
+                    </div>
+
+                    <div id="main-2">
+                        <div class="c c-1" onclick="changeColor('teal')"></div>
+                        <div class="c c-2" onclick="changeColor('firebrick')"> </div>
+                        <div class="c c-3" onclick="changeColor('aqua')"></div>
+                        <div class="c c-4" onclick="changeColor('greenyellow')"></div>
+                        <div class="c c-5" onclick="changeColor('gray')"></div>
+                        <div class="c c-6" onclick="changeColor('red')"></div>
+                        <div class="c c-7" onclick="changeColor('blue')"></div>
+                        <div class="c c-8" onclick="changeColor('blueviolet')"></div>
+                        <div class="c c-9" onclick="changeColor('goldenrod')"></div>
+                    </div>
+
+
+                    <form name="stylee">
+                        <h4 class="mainTextColor">Style:</h4>
+                        <input type="checkbox" class="custom-checkbox" id="boldTxt">
+                        <label for="boldTxt">Bold Text</label>
+                        <input type="checkbox" class="custom-checkbox" id="cursiveTxt">
+                        <label for="cursiveTxt">Cursive Text</label>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="addBlock" class="add-block hidden">
+
+            <form>
+                <h4 class="mainTextColor text">Choose whay you want: <button id="backbt" class="btn-back" type="button" onclick="backBt()">Back</button></h4>
+                <input onclick="tableRadbtn()" class="sizeStyle custom-radio" type="radio" name="tab-lis" id="r1">
+                <label for="r1">table</label>
+                <input onclick="listRadbtn()" class="sizeStyle custom-radio" type="radio" name="tab-lis" id="r2">
+                <label for="r2">list</label>
+            </form>
+
+            <form name="formTb" id="addTable" class="addTable hidden">
+                <div class="wrap-inp">
+                    <div class="inpText">Count TR:</div>
+                    <input name="countTR" class="inp" type="text" onfocus="ggg()" onblur="fff()" placeholder="Count TR:">
+                </div>
+
+                <div class="wrap-inp">
+                    <span class="inpText">Count TD:</span>
+                    <input name="countTD" class="inp" type="text" onfocus="ggg()" onblur="fff()" placeholder="Count TD:">
+                </div>
+
+                <h4 class="textMain">Add style to your table:</h4>
+
+                <div class="wrap-inp">
+                    <span class="inpText">Width of TD:</span>
+                    <input name="borderWidthTD" class="inp" type="text" onfocus="ggg()" onblur="fff()" placeholder="Width of TD:">
+                </div>
+
+                <div class="wrap-inp">
+                    <span class="inpText">Height of TD:</span>
+                    <input name="borderHeightTD" class="inp" type="text" onfocus="ggg()" onblur="fff()" placeholder="Height of TD:">
+                </div>
+
+                <span class="inpText">Width of border:</span>
+                <input name="borderWidth" class="inpSmall" type="text" onfocus="ggg()" onblur="fff()" placeholder="Width:">
+
+                <span class="inpText">Type of border:</span>
+                <select name="borderType" class="selectSmall" onfocus="ggg()" onblur="fff()"> 
+                    <option value="solid">solid</option>
+                    <option value="dotted">dotted</option>
+                    <option value="dashed">dashed</option>
+                    <option value="double">double</option>
+                    <option value="none">none</option>
+                </select>
+
+                <span class="inpText">Color of border:</span>
+                <select name="borderColor" class="selectSmall" onfocus="ggg()" onblur="fff()"> 
+                    <option value="black">black</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                    <option value="pink">pink</option>
+                </select>
+
+                <button id="btn-createTb" class="btn-createTabl" type="button" onclick="createTbl()">Create table</button>
+            </form>
+
+
+            <form name="formLi" id="addList" class="addList hidden">
+                <div class="wrap-inp">
+                    <div class="inpText">Count Li:</div>
+                    <input name="countLi" class="inp" type="text" onfocus="ggg()" onblur="fff()" placeholder="Count Li:">
+                </div>
+
+
+                <span class="selectText">Type of marks:</span>
+                <select name="TypeLi" class="selectMarks" onfocus="ggg()" onblur="fff()"> 
+                        <option value="circle">circle</option>
+                        <option value="disc">disc</option>
+                        <option value="square">square</option>
+                        <option value="upper-roman">upper-roman</option>
+                        <option value="lower-alpha">lower-alpha</option>
+                        <option value="georgian">georgian</option>
+                    </select>
+
+                <button id="btn-createLi" class="btn-createTabl" type="button" onclick="createLi()">Create list</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+</html>
